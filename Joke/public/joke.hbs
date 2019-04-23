@@ -1,0 +1,33 @@
+
+<div class="content">
+    <h1>Create a Joke</h1>
+    <div >
+        <input id="setup" type="text" placeholder="Setup" width="100">
+
+        <input id="punchline" type="text" placeholder="Punchline" width="100">
+
+        <button onclick="jokeCreator()" >Create</button>
+    </div>
+    <div >
+            {{#each jokes}}
+                <ol>
+                    <li>{{this.setup}}</li>
+                    <li>{{this.punchline}}</li>
+                </ol>
+            {{/each}}
+    </div>
+    <div >
+        {{#each webservices}}
+            <ol>
+                <li>{{this.name}}</li>
+                <li>{{this.adresse}}</li>
+            </ol>
+        {{/each}}
+    </div>
+            {{#each otherSitesJokes}}
+                <ol>
+                    <li>{{this.setup}}</li>
+                    <li>{{this.punchline}}</li>
+                </ol>
+    {{/each}}
+</div>
